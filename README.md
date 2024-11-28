@@ -4,6 +4,10 @@
 
 This is a test bed for experimenting with vanilla JavaScript web development.
 
+The live demo can be found at:
+https://mattfors.github.io/vanillajs-experiment/
+
+
 ### Prerequisites
 
 Make sure you have Node.js and npm installed on your machine. You can download them from [nodejs.org](https://nodejs.org/).
