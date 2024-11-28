@@ -1,5 +1,5 @@
 {
-  "name": "vanillajs-experiment",
+  "name": "@mattfors/vanillajs-experiment",
   "version": "1.0.0",
   "description": "Test vanillajs project",
   "main": "index.js",
