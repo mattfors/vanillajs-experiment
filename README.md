@@ -1,4 +1,6 @@
 # vanillajs-experiment
+[![CI](https://github.com/mattfors/vanillajs-experiment/actions/workflows/main.yml/badge.svg)](https://github.com/mattfors/vanillajs-experiment/actions/workflows/main.yml)
+
 
 This is a test bed for experimenting with vanilla JavaScript web development.
 
