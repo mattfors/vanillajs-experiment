@@ -1,20 +1,20 @@
 import './styles.css';
-let counter = 0;
+import { getCounter, saveCounter } from './dbService';
 
-document.getElementById('app').innerText = `Counter: ${counter}`;
+document.addEventListener('DOMContentLoaded', async () => {
+  const counterDisplay = document.getElementById('counter-display');
+  const button = document.getElementById('button');
+  const box = document.getElementById('counter-display-box');
 
-document.getElementById('button').addEventListener('click', () => {
+  let counter = await getCounter();
+  counterDisplay.innerText = `Counter: ${counter}`;
+
+  button.classList.remove('is-skeleton');
+  box.classList.remove('skeleton-block');
+
+  document.getElementById('button').addEventListener('click', async () => {
     counter++;
-    document.getElementById('app').innerText = `Counter: ${counter}`;
-});
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-      const swUrl = `${window.location.pathname}service-worker.bundle.js`;
-    navigator.serviceWorker.register(swUrl).then(registration => {
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, err => {
-      console.log('ServiceWorker registration failed: ', err);
-    });
+    counterDisplay.innerText = `Counter: ${counter}`;
+    await saveCounter(counter);
   });
-}
+});

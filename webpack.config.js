@@ -5,8 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/index.js',
-    'service-worker' : './src/service-worker.js'
+    main: './src/index.js'
   },
   mode: 'development',
   output: {
@@ -21,8 +20,7 @@ module.exports = {
     watchFiles: [
         'src/**/*.html',
         'src/**/*.css'
-    ],
-    server: 'https',
+    ]
   },
   module: {
     rules: [

@@ -7,20 +7,19 @@
     <link rel="icon" href="assets/images/favicon.ico">
   </head>
   <body>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <p class="title">VanillaJS Experiment</p>
+      <p class="subtitle">This is a <strong>testbed</strong> for experimentation.</p>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        VanillaJS Experiment
-      </h1>
-      <p class="subtitle">
-        This is a <strong>testbed</strong> for experimentation!
-      </p>
-
-      <div class="box block">
-        <div class="block" id="app"></div>
-        <button id="button" class="button is-primary">Click me</button>
+      <div class="box block skeleton-block" id="counter-display-box">
+        <div class="block is-size-1" id="counter-display"></div>
       </div>
-
+      <button id="button" class="button is-primary is-skeleton">Click me</button>
     </div>
   </section>
 
