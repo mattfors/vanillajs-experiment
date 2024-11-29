@@ -1,12 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    'service-worker' : './src/service-worker.js'
+  },
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
   },
   devServer: {
     static: {
@@ -16,7 +21,8 @@ module.exports = {
     watchFiles: [
         'src/**/*.html',
         'src/**/*.css'
-    ]
+    ],
+    server: 'https',
   },
   module: {
     rules: [
@@ -26,8 +32,15 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: "./src/index.html",
-    filename: "index.html"
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html"
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/assets', to: 'assets' }
+      ]
+    })
+  ]
 };
