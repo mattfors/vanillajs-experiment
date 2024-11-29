@@ -10,7 +10,8 @@ document.getElementById('button').addEventListener('click', () => {
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.bundle.js').then(registration => {
+      const swUrl = `${window.location.pathname}service-worker.bundle.js`;
+    navigator.serviceWorker.register(swUrl).then(registration => {
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, err => {
       console.log('ServiceWorker registration failed: ', err);
