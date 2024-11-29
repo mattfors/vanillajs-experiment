@@ -1,6 +1,9 @@
 import './styles.css';
-document.getElementById('app').innerText = 'Hello World!';
+let counter = 0;
+
+document.getElementById('app').innerText = `Counter: ${counter}`;
 
 document.getElementById('button').addEventListener('click', () => {
-    console.log('Button was clicked!');
+    counter++;
+    document.getElementById('app').innerText = `Counter: ${counter}`;
 });
