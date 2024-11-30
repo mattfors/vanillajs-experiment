@@ -26,7 +26,7 @@ export async function saveCounter(value) {
   const timestamp = new Date().toISOString();
 
   if (sessionId === null) {
-    sessionId = await store.add({ value, lastUpdate: timestamp });;
+    sessionId = await store.add({ value, lastUpdate: timestamp });
   } else {
     const record = await store.get(sessionId);
     record.value = value;
