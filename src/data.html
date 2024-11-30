@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VanillaJS Experiment</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Counter</a>
+            <a class="navbar-item" href="data.html">Data</a>
+            <a class="navbar-item" href="about.html">About</a>
+        </div>
+    </nav>
+
+    <section class="hero is-info">
+        <div class="hero-body">
+            <p class="title">Counter Data</p>
+            <p class="subtitle">History for your counter.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="box block skeleton-block" id="data-display-box">
+                <table class="table is-fullwidth is-striped ">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Count</th>
+                        <th>Last Update</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody id="data-display">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <i class="fa-brands fa-github"></i>
+                Made with ❤️ by <a href="https://github.com/mattfors">Matthew Fors</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
