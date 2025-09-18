@@ -29,13 +29,19 @@
 
   <section class="section">
     <div class="container">
-      <div class="box block skeleton-block" id="counter-display-box">
-        <div class="block is-size-1" id="counter-display"></div>
-
+      <div class="columns">
+        <div class="column is-half">
+          <div class="box block skeleton-block" id="counter-display-box">
+            <div class="block is-size-1" id="counter-display"></div>
+          </div>
+          <button id="button" class="button is-primary is-skeleton is-large">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="column is-half">
+          <div id="event-feed-container"></div>
+        </div>
       </div>
-      <button id="button" class="button is-primary is-skeleton is-large">
-        <i class="fa-solid fa-plus"></i>
-      </button>
     </div>
   </section>
 
